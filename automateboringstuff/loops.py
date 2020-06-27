@@ -18,3 +18,7 @@ def for_loop():
 
 
 for_loop()
+
+
+def gauss():
+    total = 0
