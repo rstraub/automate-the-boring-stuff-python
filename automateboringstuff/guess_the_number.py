@@ -18,7 +18,7 @@ def guess_the_number():
             print('Good job! You guessed my number in ' + str(guesses) + ' guesses!')
             break
 
-        guesses_left = 7 - guesses
+        guesses_left = 6 - guesses
         print(str(guesses_left) + ' guesses left.')
 
 
