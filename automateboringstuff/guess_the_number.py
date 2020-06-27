@@ -15,7 +15,7 @@ def guess_the_number():
         elif guess > secret:
             print('Your guess is too high.')
         else:
-            print('Good job! You guessed my number in 4 guesses!')
+            print('Good job! You guessed my number in ' + str(guesses) + ' guesses!')
             break
 
         guesses_left = 7 - guesses
