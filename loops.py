@@ -3,6 +3,8 @@ def while_loop():
     while i <= 10:
         print(i)
         i += 1
+        if i == 5:
+            break
 
 
 while_loop()
@@ -10,6 +12,8 @@ while_loop()
 
 def for_loop():
     for i in range(11, 21):
+        if i == 15:
+            continue
         print(i)
 
 
