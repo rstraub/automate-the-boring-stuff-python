@@ -1,7 +1,10 @@
-import time, sys
+import sys
+import time
 
 indent = 0
 indentIncreasing = True
+maxIndent = 20
+minIndent = 0
 
 try:
     while True:
@@ -10,11 +13,11 @@ try:
         time.sleep(0.1)
         if indentIncreasing:
             indent = indent + 1
-            if indent == 20:
+            if indent == maxIndent:
                 indentIncreasing = False
         else:
             indent = indent - 1
-            if indent == 0:
+            if indent == minIndent:
                 indentIncreasing = True
 except KeyboardInterrupt:
     sys.exit()
