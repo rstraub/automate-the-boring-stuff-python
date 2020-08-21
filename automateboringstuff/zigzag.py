@@ -5,11 +5,12 @@ indent = 0
 indentIncreasing = True
 maxIndent = 20
 minIndent = 0
+symbols = '*******'
 
 try:
     while True:
         print(' ' * indent, end='')
-        print('*******')
+        print(symbols)
         time.sleep(0.1)
         if indentIncreasing:
             indent = indent + 1
