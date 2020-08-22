@@ -10,14 +10,16 @@ def is_even(number):
 
 
 def run():
+    number = 0
     try:
         number = int(input())
-        result = number
-        while result != 1:
-            result = collatz(result)
-            print(result)
     except ValueError:
         print('You must enter a number')
+
+    result = number
+    while result != 1:
+        result = collatz(result)
+        print(result)
 
 
 run()
