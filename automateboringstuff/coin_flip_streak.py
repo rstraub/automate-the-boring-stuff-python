@@ -15,17 +15,19 @@ def coin_tosses(amount):
     return result
 
 
-def streak_amount(coin_tosses):
+def streak_amount(tosses):
     amount_of_streaks = 0
     current_streak = 0
-    for index, coin_toss in enumerate(coin_tosses):
+    for index, coin_toss in enumerate(tosses):
         if index == 0:
+            current_streak = 1
             continue
-        previous = coin_tosses[index - 1]
+
+        previous = tosses[index - 1]
         if coin_toss == previous:
             current_streak += 1
         else:
-            current_streak = 0
+            current_streak = 1
 
         if current_streak == 6:
             amount_of_streaks += 1

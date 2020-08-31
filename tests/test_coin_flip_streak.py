@@ -29,7 +29,15 @@ class CoinFlipStreak(unittest.TestCase):
 
     def test_should_return_one_given_streak_of_six_or_more(self):
         result = streak_amount(('H', 'H', 'H', 'H', 'H', 'H'))
-        self.assertTrue(1, result)
+        self.assertEqual(1, result)
+
+    def test_should_return_two_given_two_broken_streaks_of_six_or_more(self):
+        result = streak_amount(('H', 'H', 'H', 'H', 'H', 'H', 'T', 'H', 'H', 'H', 'H', 'H', 'H'))
+        self.assertEqual(2, result)
+
+    def test_should_return_zero_for_broken_streak(self):
+        result = streak_amount(('H', 'H', 'H', 'T', 'H', 'H', 'H'))
+        self.assertEqual(0, result)
 
 
 if __name__ == '__main__':
