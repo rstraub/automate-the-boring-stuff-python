@@ -1,4 +1,7 @@
-def as_heads_or_tails(param):
-    pass
+def as_heads_or_tails(number):
+    if number == 1:
+        return 'H'
+    else:
+        return 'T'
 
 
