@@ -16,4 +16,6 @@ def coin_tosses(amount):
 
 
 def is_streak(coin_tosses):
+    if len(coin_tosses) >= 6:
+        return True
     return False

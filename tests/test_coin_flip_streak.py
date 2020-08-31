@@ -27,6 +27,10 @@ class CoinFlipStreak(unittest.TestCase):
         result = is_streak(('H', 'H', 'H', 'H', 'H'))
         self.assertFalse(result)
 
+    def test_should_return_false_given_streak_of_six_or_more(self):
+        result = is_streak(('H', 'H', 'H', 'H', 'H', 'H'))
+        self.assertTrue(result)
+
 
 if __name__ == '__main__':
     unittest.main()
