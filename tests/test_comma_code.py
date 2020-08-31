@@ -16,6 +16,10 @@ class CommaCode(unittest.TestCase):
         result = comma_code([])
         self.assertEqual('', result)
 
+    def test_comma_code_returns_word_when_single_word_is_passed(self):
+        result = comma_code(['one'])
+        self.assertEqual('one', result)
+
 
 if __name__ == '__main__':
     unittest.main()
