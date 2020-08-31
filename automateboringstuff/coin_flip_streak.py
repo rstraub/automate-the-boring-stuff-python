@@ -5,3 +5,5 @@ def as_heads_or_tails(number):
         return 'T'
 
 
+def coin_tosses(amount):
+    return [as_heads_or_tails(1)]
