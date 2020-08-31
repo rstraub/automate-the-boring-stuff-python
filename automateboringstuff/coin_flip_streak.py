@@ -8,10 +8,14 @@ def as_heads_or_tails(number):
         return 'T'
 
 
+def heads_or_tails():
+    return as_heads_or_tails(randint(0, 1))
+
+
 def coin_tosses(amount):
     result = []
     for toss in range(amount):
-        result.append(as_heads_or_tails(randint(0, 1)))
+        result.append(heads_or_tails())
     return result
 
 
