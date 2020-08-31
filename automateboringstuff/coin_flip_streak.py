@@ -15,7 +15,20 @@ def coin_tosses(amount):
     return result
 
 
-def is_streak(coin_tosses):
-    if len(coin_tosses) >= 6:
-        return True
-    return False
+def streak_amount(coin_tosses):
+    amount_of_streaks = 0
+    current_streak = 0
+    for index, coin_toss in enumerate(coin_tosses):
+        if index == 0:
+            continue
+        previous = coin_tosses[index - 1]
+        if coin_toss == previous:
+            current_streak += 1
+        else:
+            current_streak = 0
+
+        if current_streak == 6:
+            amount_of_streaks += 1
+            current_streak = 0
+
+    return amount_of_streaks
