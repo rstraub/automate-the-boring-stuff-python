@@ -34,3 +34,12 @@ def streak_amount(tosses):
             current_streak = 0
 
     return amount_of_streaks
+
+
+def coin_flip_streak():
+    number_of_streaks = streak_amount(coin_tosses(10000))
+    print('Amount of streaks:', number_of_streaks)
+    print('Chance of streak: %s%%' % (number_of_streaks / 100))
+
+
+coin_flip_streak()
