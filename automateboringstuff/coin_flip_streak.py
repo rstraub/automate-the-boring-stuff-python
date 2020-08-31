@@ -6,4 +6,7 @@ def as_heads_or_tails(number):
 
 
 def coin_tosses(amount):
-    return [as_heads_or_tails(1)]
+    result = []
+    for toss in range(amount):
+        result.append(as_heads_or_tails(1))
+    return result

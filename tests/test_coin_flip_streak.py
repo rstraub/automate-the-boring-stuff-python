@@ -12,10 +12,14 @@ class CoinFlipStreak(unittest.TestCase):
         result = as_heads_or_tails(0)
         self.assertEqual('T', result)
 
-    def test_should_return_coin_flip_list_given_one(self):
+    def test_should_return_one_coin_toss_given_one(self):
         result = coin_tosses(1)
         self.assertEqual(1, len(result))
         self.assertTrue(result[0] == ('H' or 'T'))
+
+    def test_should_return_x_coin_tosses_given_x(self):
+        result = len(coin_tosses(100))
+        self.assertEqual(100, result)
 
 
 if __name__ == '__main__':
