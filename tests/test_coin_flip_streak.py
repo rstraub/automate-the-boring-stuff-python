@@ -15,6 +15,7 @@ class CoinFlipStreak(unittest.TestCase):
     def test_should_return_coin_flip_list_given_one(self):
         result = coin_tosses(1)
         self.assertEqual(1, len(result))
+        self.assertTrue(result[0] == ('H' or 'T'))
 
 
 if __name__ == '__main__':
