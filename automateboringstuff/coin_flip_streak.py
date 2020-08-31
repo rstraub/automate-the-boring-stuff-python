@@ -13,3 +13,7 @@ def coin_tosses(amount):
     for toss in range(amount):
         result.append(as_heads_or_tails(randint(0, 1)))
     return result
+
+
+def is_streak(coin_tosses):
+    return False

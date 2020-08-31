@@ -1,6 +1,6 @@
 import unittest
 
-from automateboringstuff.coin_flip_streak import as_heads_or_tails, coin_tosses
+from automateboringstuff.coin_flip_streak import as_heads_or_tails, coin_tosses, is_streak
 
 
 class CoinFlipStreak(unittest.TestCase):
@@ -22,6 +22,10 @@ class CoinFlipStreak(unittest.TestCase):
         self.assertEqual(100, len(result))
         self.assertTrue('T' in result)
         self.assertTrue('H' in result)
+
+    def test_should_return_false_given_streak_of_five_or_less(self):
+        result = is_streak(('H', 'H', 'H', 'H', 'H'))
+        self.assertFalse(result)
 
 
 if __name__ == '__main__':
