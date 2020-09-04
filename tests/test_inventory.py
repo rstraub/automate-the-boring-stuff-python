@@ -9,6 +9,13 @@ class Inventory(unittest.TestCase):
         result = total_items(inventory)
         self.assertEqual('Total number of items: 0', result)
 
+    def test_should_give_total_items_of_one_given_an_inventory_with_a_single_item(self):
+        inventory = {
+            'arrow': 1
+        }
+        result = total_items(inventory)
+        self.assertEqual('Total number of items: 1', result)
+
 
 if __name__ == '__main__':
     unittest.main()
