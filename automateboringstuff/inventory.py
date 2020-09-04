@@ -1,7 +1,9 @@
 def display_inventory(inventory):
-    print("Inventory:")
-    print(formatted_items(inventory))
-    print(total_items(inventory))
+    print(
+        f"""Inventory:
+{formatted_items(inventory)}
+{total_items(inventory)}"""
+    )
 
 
 def formatted_items(inventory):
