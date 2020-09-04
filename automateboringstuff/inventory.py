@@ -28,14 +28,26 @@ def total_items(inventory):
 
 
 def pickup_loot(inventory, loot):
-    updated_inventory = inventory
-    return updated_inventory
+    for item in loot:
+        inventory.setdefault(item, 0)
+        inventory[item] = inventory[item] + 1
+    return inventory
 
 
-display_inventory({
+inventory = {
     'arrow': 12,
     'gold coin': 42,
     'rope': 1,
     'torch': 6,
     'dagger': 1
-})
+}
+
+display_inventory(inventory)
+
+pickup_loot(inventory, ['armour'])
+
+print('--------------')
+print('picked up loot')
+print('--------------')
+
+display_inventory(inventory)

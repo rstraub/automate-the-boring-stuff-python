@@ -51,17 +51,18 @@ class Inventory(unittest.TestCase):
 
         self.assertEqual(inventory, result)
 
-    def test_should_add_single_item_to_inventory(self):
+    def test_should_add_single_new_item_to_inventory(self):
         inventory = {
             'arrow': 1,
             'potion': 1
         }
         expected = {
-            'arrow': 2,
-            'potion': 1
+            'arrow': 1,
+            'potion': 1,
+            'dagger': 1
         }
 
-        loot = ['arrow']
+        loot = ['dagger']
 
         result = pickup_loot(inventory, loot)
 
