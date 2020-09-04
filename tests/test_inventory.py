@@ -68,6 +68,22 @@ class Inventory(unittest.TestCase):
 
         self.assertEqual(expected, result)
 
+    def test_should_add_single_existing_item_to_inventory(self):
+        inventory = {
+            'arrow': 1,
+            'potion': 1
+        }
+        expected = {
+            'arrow': 2,
+            'potion': 1,
+        }
+
+        loot = ['arrow']
+
+        result = pickup_loot(inventory, loot)
+
+        self.assertEqual(expected, result)
+
 
 if __name__ == '__main__':
     unittest.main()
