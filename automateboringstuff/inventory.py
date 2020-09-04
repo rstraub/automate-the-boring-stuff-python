@@ -34,7 +34,7 @@ def pickup_loot(inventory, loot):
     return inventory
 
 
-inventory = {
+initial_inventory = {
     'arrow': 12,
     'gold coin': 42,
     'rope': 1,
@@ -42,12 +42,12 @@ inventory = {
     'dagger': 1
 }
 
-display_inventory(inventory)
+display_inventory(initial_inventory)
 
-pickup_loot(inventory, ['armour'])
+pickup_loot(initial_inventory, ['armour'])
 
 print('--------------')
 print('picked up loot')
 print('--------------')
 
-display_inventory(inventory)
+display_inventory(initial_inventory)
