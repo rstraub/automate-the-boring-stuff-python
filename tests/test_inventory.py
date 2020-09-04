@@ -84,6 +84,22 @@ class Inventory(unittest.TestCase):
 
         self.assertEqual(expected, result)
 
+    def test_should_add_multiple_similar_items_to_inventory(self):
+        inventory = {
+            'arrow': 1,
+            'potion': 1
+        }
+        expected = {
+            'arrow': 3,
+            'potion': 2,
+        }
+
+        loot = ['arrow', 'potion', 'arrow']
+
+        result = pickup_loot(inventory, loot)
+
+        self.assertEqual(expected, result)
+
 
 if __name__ == '__main__':
     unittest.main()
