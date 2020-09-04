@@ -1,6 +1,6 @@
 import unittest
 
-from automateboringstuff.inventory import total_items, formatted_item, formatted_items
+from automateboringstuff.inventory import total_items, formatted_item, formatted_items, pickup_loot
 
 
 class Inventory(unittest.TestCase):
@@ -38,6 +38,19 @@ class Inventory(unittest.TestCase):
         result = formatted_items(inventory)
 
         self.assertEqual('1 arrow\n1 potion', result)
+
+    def test_should_add_empty_list_to_inventory(self):
+        inventory = {
+            'arrow': 1,
+            'potion': 1
+        }
+
+        loot = []
+
+        result = pickup_loot(inventory, loot)
+
+        self.assertEqual(inventory, result)
+
 
 if __name__ == '__main__':
     unittest.main()

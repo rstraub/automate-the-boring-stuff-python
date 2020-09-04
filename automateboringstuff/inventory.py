@@ -27,6 +27,10 @@ def total_items(inventory):
     return f'Total number of items: {total_amount}'
 
 
+def pickup_loot(inventory, loot):
+    return inventory
+
+
 display_inventory({
     'arrow': 12,
     'gold coin': 42,
