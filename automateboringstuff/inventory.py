@@ -1,12 +1,14 @@
 def display_inventory(inventory):
-    total_items(inventory)
+    print("Inventory:")
+    print(formatted_items(inventory))
+    print(total_items(inventory))
 
 
 def formatted_items(inventory):
     display_message = ''
     for index, item in enumerate(inventory.items()):
         display_message += f'{formatted_item(item)}'
-        is_last_item = item == (len(inventory.items()) - 1)
+        is_last_item = index == (len(inventory.items()) - 1)
         if not is_last_item:
             display_message += '\n'
     return display_message
@@ -23,3 +25,12 @@ def total_items(inventory):
     for item in inventory:
         total_amount += inventory.get(item)
     return f'Total number of items: {total_amount}'
+
+
+display_inventory({
+    'arrow': 12,
+    'gold coin': 42,
+    'rope': 1,
+    'torch': 6,
+    'dagger': 1
+})

@@ -37,7 +37,7 @@ class Inventory(unittest.TestCase):
 
         result = formatted_items(inventory)
 
-        self.assertEqual('1 arrow\n1 potion\n', result)
+        self.assertEqual('1 arrow\n1 potion', result)
 
 if __name__ == '__main__':
     unittest.main()
