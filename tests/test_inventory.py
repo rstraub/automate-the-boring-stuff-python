@@ -1,6 +1,6 @@
 import unittest
 
-from automateboringstuff.inventory import total_items, formatted_item
+from automateboringstuff.inventory import total_items, formatted_item, formatted_items
 
 
 class Inventory(unittest.TestCase):
@@ -28,6 +28,16 @@ class Inventory(unittest.TestCase):
         item = ['arrow', 1]
         result = formatted_item(item)
         self.assertEqual('1 arrow', result)
+
+    def test_should_format_inventory_items_given_inventory_with_multiple_items(self):
+        inventory = {
+            'arrow': 1,
+            'potion': 1
+        }
+
+        result = formatted_items(inventory)
+
+        self.assertEqual('1 arrow\n1 potion\n', result)
 
 if __name__ == '__main__':
     unittest.main()
