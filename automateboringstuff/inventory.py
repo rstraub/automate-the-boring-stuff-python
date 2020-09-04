@@ -28,7 +28,8 @@ def total_items(inventory):
 
 
 def pickup_loot(inventory, loot):
-    return inventory
+    updated_inventory = inventory
+    return updated_inventory
 
 
 display_inventory({
