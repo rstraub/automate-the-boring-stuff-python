@@ -8,11 +8,7 @@ def format_data(data):
 def justify_column_texts(data):
     formatted_data = []
     for column in data:
-        longest_string = 0
-        for row in column:
-            length = len(row)
-            if length > longest_string:
-                longest_string = length
+        longest_string = get_longest_string_length(column)
 
         formatted_column = []
         for row in column:
@@ -20,6 +16,15 @@ def justify_column_texts(data):
             formatted_column.append(formatted_item)
         formatted_data.append(formatted_column)
     return formatted_data
+
+
+def get_longest_string_length(column):
+    longest_string = 0
+    for row in column:
+        length = len(row)
+        if length > longest_string:
+            longest_string = length
+    return longest_string
 
 
 def get_row_texts(formatted_data):
