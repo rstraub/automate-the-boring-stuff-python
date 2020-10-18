@@ -4,8 +4,8 @@ from automateboringstuff.table_printer import format_data
 
 
 class MyTestCase(unittest.TestCase):
-    def test_should_format_data_given_single_list(self):
-        table_data = ["apple", "orange", "banana"]
+    def test_should_format_data_given_single_column(self):
+        table_data = [["apple", "orange", "banana"]]
         expected = """ apple
 orange
 banana"""
