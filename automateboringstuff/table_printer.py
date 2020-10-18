@@ -1,6 +1,6 @@
 def format_data(data):
-    formatted_data = justify_table(data)
-    row_texts = get_row_texts(formatted_data)
+    justified_table = justify_table(data)
+    row_texts = get_row_texts(justified_table)
 
     return "\n".join(row_texts)
 
