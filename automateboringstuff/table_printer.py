@@ -1,11 +1,11 @@
 def format_data(data):
-    formatted_data = justify_column_texts(data)
+    formatted_data = justify_table_texts(data)
     row_texts = get_row_texts(formatted_data)
 
     return "\n".join(row_texts)
 
 
-def justify_column_texts(data):
+def justify_table_texts(data):
     formatted_data = []
     for column in data:
         longest_string = get_longest_string_length(column)
