@@ -1,5 +1,4 @@
 def format_data(data):
-    # Justifying column texts
     formatted_data = justify_column_texts(data)
 
     # Build the result string
@@ -7,7 +6,7 @@ def format_data(data):
     amount_of_rows = len(formatted_data[0])
 
     row = 0
-    result = ""
+    row_texts = []
     while row < amount_of_rows:
         row_text = ""
         column = 0
@@ -18,14 +17,11 @@ def format_data(data):
                 row_text += " "
 
             column += 1
-        result += row_text
-
-        if row + 1 is not amount_of_rows:
-            result += "\n"
+        row_texts.append(row_text)
 
         row += 1
 
-    return result
+    return "\n".join(row_texts)
 
 
 def justify_column_texts(data):
