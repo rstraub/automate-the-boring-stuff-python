@@ -1,4 +1,4 @@
-def format_data(data):
+def format_table(data):
     justified_table = justify_table(data)
     row_texts = get_row_texts(justified_table)
 
@@ -53,4 +53,4 @@ def get_row_texts(formatted_data):
 
 
 def print_table(data):
-    print(format_data(data))
+    print(format_table(data))

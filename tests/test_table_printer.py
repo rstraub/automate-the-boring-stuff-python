@@ -1,6 +1,6 @@
 import unittest
 
-from automateboringstuff.table_printer import format_data
+from automateboringstuff.table_printer import format_table
 
 
 class MyTestCase(unittest.TestCase):
@@ -10,7 +10,7 @@ class MyTestCase(unittest.TestCase):
 orange
 banana"""
 
-        result = format_data(table_data)
+        result = format_table(table_data)
 
         self.assertEqual(result, expected)
 
@@ -20,7 +20,7 @@ banana"""
 orange   car
 banana train"""
 
-        result = format_data(table_data)
+        result = format_table(table_data)
 
         self.assertEqual(result, expected)
 
