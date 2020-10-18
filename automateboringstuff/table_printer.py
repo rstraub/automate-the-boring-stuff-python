@@ -15,11 +15,11 @@ def justify_table(data):
 
 def justify_column(column):
     longest_string = get_longest_string_length(column)
-    formatted_column = []
+    justified_column = []
     for row in column:
         formatted_item = str(row).rjust(longest_string)
-        formatted_column.append(formatted_item)
-    return formatted_column
+        justified_column.append(formatted_item)
+    return justified_column
 
 
 def get_longest_string_length(column):
