@@ -1,25 +1,6 @@
 def format_data(data):
     formatted_data = justify_column_texts(data)
-
-    # Build the result string
-    amount_of_columns = len(formatted_data)
-    amount_of_rows = len(formatted_data[0])
-
-    row = 0
-    row_texts = []
-    while row < amount_of_rows:
-        row_text = ""
-        column = 0
-        while column < amount_of_columns:
-            row_text += formatted_data[column][row]
-
-            if column + 1 is not amount_of_columns:
-                row_text += " "
-
-            column += 1
-        row_texts.append(row_text)
-
-        row += 1
+    row_texts = get_row_texts(formatted_data)
 
     return "\n".join(row_texts)
 
@@ -39,6 +20,27 @@ def justify_column_texts(data):
             formatted_column.append(formatted_item)
         formatted_data.append(formatted_column)
     return formatted_data
+
+
+def get_row_texts(formatted_data):
+    amount_of_columns = len(formatted_data)
+    amount_of_rows = len(formatted_data[0])
+    row = 0
+    row_texts = []
+    while row < amount_of_rows:
+        row_text = ""
+        column = 0
+        while column < amount_of_columns:
+            row_text += formatted_data[column][row]
+
+            if column + 1 is not amount_of_columns:
+                row_text += " "
+
+            column += 1
+        row_texts.append(row_text)
+
+        row += 1
+    return row_texts
 
 
 def print_table(data):
