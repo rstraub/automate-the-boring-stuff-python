@@ -1,18 +1,8 @@
 def format_data(data):
-    formatted_data = []
-    for column in data:
-        longest_string = 0
-        for row in column:
-            length = len(row)
-            if length > longest_string:
-                longest_string = length
+    # Justifying column texts
+    formatted_data = justify_column_texts(data)
 
-        formatted_column = []
-        for row in column:
-            formatted_item = str(row).rjust(longest_string)
-            formatted_column.append(formatted_item)
-        formatted_data.append(formatted_column)
-
+    # Build the result string
     amount_of_columns = len(formatted_data)
     amount_of_rows = len(formatted_data[0])
 
@@ -36,6 +26,23 @@ def format_data(data):
         row += 1
 
     return result
+
+
+def justify_column_texts(data):
+    formatted_data = []
+    for column in data:
+        longest_string = 0
+        for row in column:
+            length = len(row)
+            if length > longest_string:
+                longest_string = length
+
+        formatted_column = []
+        for row in column:
+            formatted_item = str(row).rjust(longest_string)
+            formatted_column.append(formatted_item)
+        formatted_data.append(formatted_column)
+    return formatted_data
 
 
 def print_table(data):
