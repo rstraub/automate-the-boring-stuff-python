@@ -36,3 +36,7 @@ def format_data(data):
         row += 1
 
     return result
+
+
+def print_table(data):
+    print(format_data(data))
