@@ -1,21 +1,25 @@
 def format_data(data):
-    formatted_data = justify_table_texts(data)
+    formatted_data = justify_table(data)
     row_texts = get_row_texts(formatted_data)
 
     return "\n".join(row_texts)
 
 
-def justify_table_texts(data):
+def justify_table(data):
     formatted_data = []
     for column in data:
-        longest_string = get_longest_string_length(column)
-
-        formatted_column = []
-        for row in column:
-            formatted_item = str(row).rjust(longest_string)
-            formatted_column.append(formatted_item)
+        formatted_column = justify_column(column)
         formatted_data.append(formatted_column)
     return formatted_data
+
+
+def justify_column(column):
+    longest_string = get_longest_string_length(column)
+    formatted_column = []
+    for row in column:
+        formatted_item = str(row).rjust(longest_string)
+        formatted_column.append(formatted_item)
+    return formatted_column
 
 
 def get_longest_string_length(column):
