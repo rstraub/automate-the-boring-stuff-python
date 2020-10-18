@@ -17,8 +17,8 @@ def justify_column(column):
     longest_string = get_longest_string_length(column)
     justified_column = []
     for row in column:
-        formatted_item = str(row).rjust(longest_string)
-        justified_column.append(formatted_item)
+        justified_row = str(row).rjust(longest_string)
+        justified_column.append(justified_row)
     return justified_column
 
 
