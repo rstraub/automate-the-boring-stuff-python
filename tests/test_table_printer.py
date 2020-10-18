@@ -14,6 +14,15 @@ banana"""
 
         self.assertEqual(result, expected)
 
+    def test_should_format_data_given_multiple_columns(self):
+        table_data = [["apple", "orange", "banana"], ["bike", "car", "train"]]
+        expected = """ apple  bike
+orange   car
+banana train"""
+
+        result = format_data(table_data)
+
+        self.assertEqual(result, expected)
 
 if __name__ == '__main__':
     unittest.main()
